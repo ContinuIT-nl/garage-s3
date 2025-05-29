@@ -19,8 +19,6 @@ services:
     image: dxflrs/garage:v1.1.0
     # network_mode: "host"
     restart: unless-stopped
-    environment:
-      - GARAGE_ADMIN_TOKEN=test_admin_token
     ports:
       - "3900:3900"
       - "3901:3901"
