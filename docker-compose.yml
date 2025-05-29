@@ -16,6 +16,19 @@ services:
     depends_on:
       - garage
 
+  webui:
+    image: khairul169/garage-webui:latest
+    container_name: garage-webui
+    restart: unless-stopped
+    volumes:
+      - ./garage.toml:/etc/garage.toml:ro
+    ports:
+      - 3909:3909
+    environment:
+      API_BASE_URL: "http://garage:3903"
+      S3_ENDPOINT_URL: "http://garage:3900"
+    env_file: .env
+
   garage:
     image: dxflrs/garage:v1.1.0
     # network_mode: "host"
