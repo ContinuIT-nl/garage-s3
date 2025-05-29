@@ -16,7 +16,7 @@ services:
 #      - garage
 
   garage:
-    image: dxflrs/garage:v0.9.3
+    image: dxflrs/garage:v1.1.0
     # network_mode: "host"
     restart: unless-stopped
     environment:
