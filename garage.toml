@@ -6,7 +6,7 @@ replication_mode = "none"
 # idk why rcp_ is needed without replication but ok 
 rpc_bind_addr = "[::]:3901"
 rpc_public_addr = "127.0.0.1:3901"
-rpc_secret = "${GARAGE_RPC_SECRET}"
+# rpc_secret = "${GARAGE_RPC_SECRET}"
 
 compression_level = 2
 
@@ -22,5 +22,5 @@ index = "index.html"
 
 [admin]
 api_bind_addr = "0.0.0.0:3903"
-metrics_token = "${GARAGE_METRICS_TOKEN}"
-admin_token = "${GARAGE_ADMIN_TOKEN}"
+# metrics_token = "${GARAGE_METRICS_TOKEN}"
+# admin_token = "${GARAGE_ADMIN_TOKEN}"
